@@ -2,7 +2,7 @@
 
 ## extract_from_text
 
-Python functions to extract unstructured information from text.
+Python function to extract unstructured information from text to be part from google cloud function.
 
 ### Requirements
 
@@ -28,8 +28,7 @@ Python functions to extract unstructured information from text.
   - Multiple object in string
 
 ## input:
-string: the text to extract information from
-You can enter text as you like just enter y or Y to continue
+string: the text to extract information from or list of strings
 
 ## output:
 json list of structured records
@@ -57,16 +56,24 @@ URLs | url_extractor_ioc-finder | ioc-finder
 URLs | url_extractor_regex | regex
 Phone numbers | phone_extractor_ioc_finder | ioc-finder
 City, state, country | geo_extractor_spacy | spacy
-Job title | title_extractor | pycorenlp
+Job title | title_extractor | stanfordcorenlp
 Quantities | qty_extractor_quantulum3 | quantulum3
 
-### Steps for Windows usage:
+### Steps for local test:
 
 1. Download Latest version of java. You can download it freely from here https://www.java.com/en/download/
-2. Download the JAR files for the StanfordCoreNLP libraries "English models only" from here https://stanfordnlp.github.io/CoreNLP/download.html
-3. Unzip the downloaded folder and Navigate to the path where you unzipped the JAR files folder.
-4. Execute the following command on the command prompt : java -mx1g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 100000000
-5. Use python version 3.7.9 and pip version 20.2.4 
-6. Execute the following command on the command prompt : git clone https://github.com/Eng-MohamedHussien/Solmax_IT.git
-7. Execute the following command on the command prompt : pip install -r requirements.txt
-8. Finally, execute the following command on the command prompt : python extractor.py
+2. Download the JAR files for the StanfordCoreNLP libraries from here https://stanfordnlp.github.io/CoreNLP/
+3. Unzip the downloaded folder.
+4. Use python version 3.7.9 and pip version 20.2.4 
+5. Execute the following command on the command prompt : git clone https://github.com/Eng-MohamedHussien/Solmax_IT.git and Navigate to the repository folder.
+6. Execute the following command on the command prompt : pip install -r requirements.txt
+7. Move downloaded jar files to the repository.
+8. Finally, execute the following command on the command prompt : pip install functions-framework && functions-framework --target extract_from_text
+9. On another terminal execute the following command on the command prompt : curl -X POST -d "input=I am a civil engineer"  http://localhost:8080
+
+
+### Output samples
+
+1. ![Alt text](outputs/img1.jpg?raw=true "Testcase1")
+
+2. ![Alt text](outputs/img2.jpg?raw=true "Testcase2")
