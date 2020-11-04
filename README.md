@@ -74,6 +74,6 @@ Quantities | qty_extractor_quantulum3 | quantulum3
 
 ### Output samples
 
-1. ![Alt text](outputs/img1.jpg?raw=true "Testcase1")
+1. ![Alt text](https://github.com/Eng-MohamedHussien/Solmax_IT/blob/main/outputs/img1.JPG)
 
-2. ![Alt text](outputs/img2.jpg?raw=true "Testcase2")
+2. ![Alt text](https://github.com/Eng-MohamedHussien/Solmax_IT/blob/main/outputs/img2.JPG)
